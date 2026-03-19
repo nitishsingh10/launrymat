@@ -8,8 +8,16 @@ let submit = document.getElementById("submit");
 let warning = document.getElementById("warning");
 let PersonalDetails = document.getElementById("personal-details");
 let success = document.getElementById("success");
-
 let inputs = document.querySelectorAll("#personal-details input");
+let alertOK = document.getElementById("alertOK");
+let newsBtn = document.getElementById("newsletter-btn");
+
+newsBtn.addEventListener("click", () => {
+    alertOK.innerHTML = `
+        <p>Thank you for subscribing to our newsletter!</p>
+    `;
+});
+
 inputs.forEach((input) => {
     input.addEventListener("input", () => {
         let allFilled = Array.from(inputs).every((input) => input.value.trim() !== "");
