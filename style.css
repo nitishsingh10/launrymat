@@ -37,6 +37,13 @@ a {
   color: inherit;
 }
 
+#desc2 {
+  margin: 40px;
+  color: var(--price);
+  font-size: 90%;
+  line-height: 1.5;
+
+}
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -181,7 +188,7 @@ a {
 
 
 .first {
-  padding: 8px 20.5px;
+  padding: 11px 20.5px;
   margin-left: 100px;
   background: var(--bg-btn);
   color: var(--text-mid);
@@ -192,7 +199,7 @@ a {
 }
 
 .rm-button{
-  padding: 8px 16px;
+  padding: 11px 16px;
   margin-left: 100px;
   background: var(--rm-bg);
   color: var(--rm-btn);
