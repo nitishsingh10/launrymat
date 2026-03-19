@@ -64,3 +64,22 @@ function updateCart() {
 
     totalamt.innerText = `₹${total.toFixed(2)}`;
 }
+
+submit.addEventListener("click", () => {
+
+    let fullName = document.getElementById("fullname").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+
+    if (cart.length > 0) {
+        alert(`Booking confirmed for ${fullName}!\nEmail: ${email}\nPhone: ${phone}\nTotal Amount: ₹${total.toFixed(2)}`);
+        cart = [];
+        total = 0;
+        bill.innerHTML = "";
+        totalamt.innerText = "₹0";
+        inputs.forEach((input) => (input.value = ""));
+    } else {
+        warning.style.display = "block";
+        warning.innerText = "Please add services to the cart before booking.";
+    }
+});

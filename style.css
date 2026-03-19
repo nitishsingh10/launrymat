@@ -573,3 +573,10 @@ hr{
 .social-icons a:hover {
   color: var(--blue);
 }
+
+.error{
+  color: red;
+  font-size: 100%;
+  text-align: center;
+  padding: 10px;
+}
