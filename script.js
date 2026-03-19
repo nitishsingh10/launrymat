@@ -6,6 +6,7 @@ let cart = [];
 let total = 0;
 let submit = document.getElementById("submit");
 let warning = document.getElementById("warning");
+let PersonalDetails = document.getElementById("personal-details");
 
 let inputs = document.querySelectorAll("#personal-details input");
 inputs.forEach((input) => {
@@ -72,7 +73,16 @@ submit.addEventListener("click", () => {
     let phone = document.getElementById("phone").value;
 
     if (cart.length > 0) {
-        alert(`Booking confirmed for ${fullName}!\nEmail: ${email}\nPhone: ${phone}\nTotal Amount: ₹${total.toFixed(2)}`);
+        warning.style.display = "none";
+
+        PersonalDetails.innerHTML = `
+            <h3>Booking Details</h3>
+            <p><strong>Name:</strong> ${fullName}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+            <p><strong>Total Amount:</strong> ₹${total.toFixed(2)}</p>
+        `;
+
         cart = [];
         total = 0;
         bill.innerHTML = "";
