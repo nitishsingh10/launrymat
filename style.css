@@ -580,3 +580,10 @@ hr{
   text-align: center;
   padding: 10px;
 }
+
+.success{
+  color: green;
+  font-size: 100%;
+  text-align: center;
+  padding: 10px;
+}

@@ -7,6 +7,7 @@ let total = 0;
 let submit = document.getElementById("submit");
 let warning = document.getElementById("warning");
 let PersonalDetails = document.getElementById("personal-details");
+let success = document.getElementById("success");
 
 let inputs = document.querySelectorAll("#personal-details input");
 inputs.forEach((input) => {
@@ -81,8 +82,10 @@ submit.addEventListener("click", () => {
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Phone:</strong> ${phone}</p>
             <p><strong>Total Amount:</strong> ₹${total.toFixed(2)}</p>
+            
         `;
-
+        success.style.display = "block";
+        success.innerText = `Booking confirmed for ${fullName}!`;
         cart = [];
         total = 0;
         bill.innerHTML = "";
