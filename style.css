@@ -29,7 +29,7 @@
   --radius-md:   10px;
   --radius-sm:   8px;
   --price :     #8066f4d6;
-  --rm-bg:      #ff8f9a;
+  --rm-bg:      #ffa2ab;
   --rm-btn:     #ff435f;
 }
 
@@ -372,4 +372,8 @@ hr{
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: all .2s ease;
+}
+
+#addItem {
+  font-size: 80%;
 }

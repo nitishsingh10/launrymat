@@ -2,6 +2,7 @@ let btn = document.querySelectorAll("#addItem");
 let bill = document.getElementById("bill-body");
 let plc = document.getElementById("placement");
 let totalamt = document.getElementById("totalamt")
+
 let cart = [];
 let total = 0;
 
@@ -15,33 +16,52 @@ inputs.forEach((input) => {
     });
 });
 
-btn.forEach((element)=>{
-    element.addEventListener('click',()=>{
+btn.forEach((element) => {
+    element.addEventListener('click', () => {
         let serviceName = element.parentElement.firstChild.nextSibling.textContent;
         let servicePrice = element.parentElement.firstChild.nextSibling.getAttribute("price");
         serviceName = serviceName.trim().split("·")[0].trim();
-        cart.push({name: serviceName, price: servicePrice});
-        plc.style.display = "none";
-        total = total + parseFloat(servicePrice);
-        updateCart();
 
+        const isInCart = element.classList.contains("rm-button");
+
+        if (!isInCart) {
+            cart.push({ name: serviceName, price: servicePrice });
+            total = total + parseFloat(servicePrice);
+            element.textContent = "Remove Item";
+            element.classList.remove("first");
+            element.classList.add("rm-button");
+            plc.style.display = "none";
+        } else {
+            const idx = cart.findIndex(item => item.name === serviceName);
+            if (idx !== -1) {
+                total = total - parseFloat(cart[idx].price);
+                cart.splice(idx, 1);
+            }
+            element.textContent = "Add Item";
+            element.classList.remove("rm-button");
+            element.classList.add("first");
+
+            if (cart.length === 0) {
+                plc.style.display = "flex";
+            }
+        }
+
+        updateCart();
     });
-})
+});
 
 function updateCart() {
     bill.innerHTML = "";
 
     cart.forEach((item, index) => {
-
         let row = document.createElement("tr");
         row.innerHTML = `
             <td>${index + 1}</td>
             <td>${item.name}</td>
             <td>₹ ${item.price}</td>
         `;
-
         bill.appendChild(row);
-
-        totalamt.innerText = `₹${total}`
     });
+
+    totalamt.innerText = `₹${total.toFixed(2)}`;
 }
