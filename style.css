@@ -1,0 +1,375 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --blue:        #3bc4ff;
+  --blue-dark:   #1a96cc;
+  --blue-light:  #cceaf9;
+  --blue-hue:    #3bc4ff;
+  --indigo:      #5b5fcf;
+  --text-dark:   #1e2430;
+  --text-mid:    #4b5563;
+  --text-gray:   #9ca3af;
+  --text-light:  #d1d5db;
+  --bg-page:     #f0f2f5;
+  --bg-card:     #ffffff;
+  --border:      #e5e7eb;
+  --bg-btn:      #3b3b3b22;
+  --bg-btn-hover:#3b3b3b33;
+  --shadow:      0 2px 20px rgba(0,0,0,0.07);
+  --radius-lg:   16px;
+  --radius-md:   10px;
+  --radius-sm:   8px;
+  --price :     #8066f4d6;
+  --rm-bg:      #ff8f9a;
+  --rm-btn:     #ff435f;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  transition: all .2s ease;
+}
+
+.btn:hover {
+  background: var(--blue-dark);
+  box-shadow: var(--shadow), 0 4px 30px rgba(0,0,0,0.1);
+}
+
+.sign-up {
+    border: none;
+    background-color: var(--blue-light);
+    color: var(--blue);
+}
+.sign-up:hover {
+    background-color: var(--blue);
+    color: #fff;
+    cursor: pointer;
+}
+
+#header, .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17.5px 56px;
+  background: var(--bg-card);
+}
+
+.nav-list{
+    gap: 32px;
+    font-size: 80%;
+    color: var(--text-gray);
+}
+
+.header-line {
+  height: 1px;
+  background: var(--border);
+}
+
+.logo {
+  font-size: 150%;
+  line-height: 1;
+  font-weight: bold;
+  color: var(--text-mid);
+}
+
+.big{
+    font-weight: 600;
+    color: var(--text-mid);
+    font-size: 270%;
+}
+.blue{
+    color: var(--blue);
+}
+
+
+#main-body{
+    display: flex;
+    align-items: center;
+    margin: 70px 170px 70px 170px;
+    gap: 92px;
+}
+
+.desc, .desc p {
+    color: var(--text-gray);
+    font-size: 100%;
+    line-height: 1.5;
+    padding: 20px 25px 20px 0;
+}
+
+.book-service{
+
+  background-image: linear-gradient(to right, var(--blue), var(--blue-hue));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 24px 48px;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 20px;
+}
+
+.book-service:hover {
+  background-image: linear-gradient(to right, var(--blue-dark), var(--blue));
+  transform: scale3d(1.1, 1.1, 1);
+  border-radius: 30px;
+}
+
+.first-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 50px;
+  background: var(--bg-card);
+  background-color: var(--blue-hue);
+}
+
+.first-footer h4 {
+  font-size: 200%;
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0px -20px 0px 50px;
+}
+
+.first-footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-dark);
+  margin: 0px 50px 0px -20px;
+}
+
+#booking {
+  height: 100vh;
+  padding: 40px 50px;
+  background: var(--bg-page);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+#service-list {
+  background: var(--bg-card);
+  border-radius: 18px;
+}
+
+#service-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 40px 40px 20px;
+
+}
+.first {
+  padding: 8px 16px;
+  margin-left: 100px;
+  background: var(--bg-btn);
+  color: var(--text-mid);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all .2s ease;
+
+}
+#service-list div button:hover {
+  background: var(--bg-btn-hover);
+}
+
+
+
+#bill-list{
+  background: var(--bg-card);
+  border-radius: 18px;
+}
+.service-header {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-mid);
+  padding: 20px;
+}
+
+.service-header h3 {
+  margin-bottom: 10px;
+  font-size: 170%;
+  text-align: start;
+}
+
+.desc1{
+  color: var(--text-gray);
+  font-size: 80%;
+}
+
+.price {
+  color: var(--price);
+  font-size: 100%;
+  font-weight: 490;
+}
+
+.dot{
+  color: var(--text-gray);
+  font-size: 100%;
+  font-weight: bold;
+  display: inline;
+  justify-content: center;
+}
+
+.bill-table-container {
+  width: 500px;
+  height: 350px;
+  overflow-y: auto;
+}
+
+.bill-table{
+  width: 500px;
+  border-collapse: collapse;
+}
+
+.bill-table th,
+.bill-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+#bill-list h2{
+  text-align: center;
+  font-weight: normal;
+  font-size: 120%;
+  color: var(--text-mid);
+  padding: 15px 0;
+}
+
+.bill-table th{
+  font-size: 80%;
+  background-color: var(--bg-btn);
+  color: var(--text-mid);
+  position: sticky;
+}
+
+#bill-body td{
+  font-size: 80%;
+  color: var(--text-mid);
+}
+
+#placement {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background: var(--bg-card);
+
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  gap: 220px;
+  align-items: center;
+  padding: 15px;
+  font-size: 130%;
+  color: var(--text-mid);
+  margin-bottom: 10px;
+}
+
+#personal-details {
+  font-size: 80%;
+  padding: 18px;
+  width: 500px;
+  border-radius: 18px;
+  background: var(--bg-card);
+}
+
+#personal-details h3{
+  font-size: 130%;
+  color: var(--text-mid);
+  margin: 0 0 5px 0;
+}
+
+.enum{
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 30px;
+}
+.form-group label {
+  font-size: 80%;
+  color: var(--text-mid);
+}
+.form-group input {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  font-size: 80%;
+}
+
+.form-group input::placeholder {
+  color: var(--text-light);
+}
+
+#submit:disabled{
+  width: 100%;
+  padding: 18px 16px;
+  border-radius: 20px;
+  background: #8066f466;
+  color: #fff;
+  border: none;
+}
+
+
+#submit:enabled{
+  width: 100%;
+  padding: 18px 16px;
+  border-radius: 20px;
+  background: #8066f4ef;
+  color: #fff;
+  border: none;
+  transition: all .2s ease;
+}
+
+#submit:enabled:hover{
+  width: 100%;
+  padding: 18px 16px;
+  border-radius: 20px;
+  background: #7154f7ef;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  scale: 1.05;
+}
+
+hr{
+  border: 1px solid var(--border);
+}
+
+.diff{
+  width: 90%;
+  margin-left: 5%;
+  border: 1px solid var(--border);
+}
+
+.rm-button{
+  padding: 8px 16px;
+  margin-left: 100px;
+  background: var(--rm-bg);
+  color: var(--rm-btn);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all .2s ease;
+}

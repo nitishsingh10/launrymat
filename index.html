@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundrymat</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <section id="Home" class="row">
+
+        <header id="header" class="header blue flex">
+            
+            <h4 id="logo" class="logo">LMat</h4>
+
+            <nav>
+                <ul  class="nav-list">
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                </ul>
+            </nav>
+
+            <button id="sign-up" class="btn sign-up"> Sign Up </button>
+
+        </header>
+
+        <div id="main-body">
+
+            <div>
+                <p id="heading">
+                    
+                    <p class="big">
+                        Revitalize Your Clothes with Expert
+                    </p>
+                    <p class="blue big">
+                        Laundry Services!
+                    </p>
+
+                </p>
+
+                <p class="desc">
+                    From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pick up and rediscover the freshness of your clothes today!
+                </p>
+
+                <button id="book" class="book-service"> Book a service today ! </button>
+            </div>
+            <div>
+                <img src="./public/images/Screenshot 2026-01-29 at 1.22.07 AM.png" alt="img">
+            </div>
+
+        </div>
+
+        <footer id="first-footer" class="first-footer">
+            <h4>Our Achivements</h4>
+
+            <div>
+                <div class="logo"">15+</div>
+                <div>Laundry Services</div>
+            </div>
+            <div>
+                <div class="logo">240+</div>
+                <div>Happy Customers</div>
+            </div>
+            
+            <div>
+                <div class="logo">2+ Years</div>
+                <div>Experience</div>
+            </div>
+        </footer>
+
+    </section>
+
+    <section id="booking">
+        <div id="service-list">
+            <section class="service-header">
+                <h3>Our Services</h3>
+                <p class="desc1">Click On the Add To Cart Button To Add The Service To Your Cart</p>
+            </section>
+
+            <hr class="diff">
+
+            <div>
+                <span price="200.00">Dry Cleaning <span class="dot">·</span> <span class="price">₹ 200.00</span></span>
+                <button id="addItem" class="first"> Add Item</button>
+            </div>
+
+            
+            <div>
+                <span price="100.00">Wash & Fold <span class="dot">·</span> <span class="price">₹ 100.00</span></span>
+                <button id="addItem" class="first"> Add Item</button>
+            </div>
+            
+            <div>
+                <span price="30.00">Ironing <span class="dot">·</span> <span class="price">₹ 30.00</span></span>
+                <button id="addItem" class="first"> Add Item</button>
+            </div>
+            
+            <div>
+                <span price="600.00">Stain Removal <span class="dot">·</span> <span class="price">₹ 600.00</span></span>
+                <button id="addItem" class="first"> Add Item</button>
+            </div>
+            
+            <div>
+                <span price="999.00">Leather and Suede Cleaning <span class="dot">·</span> <span class="price">₹ 999.00</span></span>
+                <button id="addItem" class="first"> Add Item</button>
+            </div>
+            
+            <div>
+                <span price="2800.00">Wedding Dress Cleaning <span class="dot">·</span> <span class="price">₹ 2800.00</span></span>
+                <button id="addItem" class="first"> Add Item</button>
+            </div>
+
+            <hr class="diff">
+
+            <div class="price">
+                Add items to the cart and book now
+            </div>
+
+            
+        </div>
+
+        <div id="Bill">
+            <div id="bill-list">
+
+                <h2>Added Items</h2>
+                <div class="bill-table-container">
+                    <table class="bill-table">
+                        <thead>
+                            <tr>
+                                <th>S No.</th>
+                                <th>Service Name</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bill-body">
+
+                        </tbody>
+                    </table>
+
+                    <div id="placement">
+                        <div>
+
+                            <h3>No items Added</h3>
+                            <p class="desc">Add items to the cart from the service bar</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="total">
+                    <div>Total Amount</div>
+                    <div id="totalamt">₹ 0</div>
+                </div>
+                
+                
+            </div>
+
+
+
+            <div id="personal-details">
+
+                <h3>Book Now</h3>
+
+                <form action="#" >
+
+                    <div class="form-group">
+                        <div>
+                            <div>
+                                <label for="fullname">Full Name</label>
+                            </div>
+                            <input type="text" id="fullname" placeholder="your full name" required>
+                        </div>
+    
+                        <div class="enum">
+                            <div>
+                                <div>
+                                    <label for="email">Email id</label>
+                                </div>
+                                <input type="text" id="email" placeholder="your email id" required>
+
+                            </div>
+    
+                            <div>
+                                <div>
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <input type="text" id="phone" placeholder="your phone number" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button id="submit" disabled>Book Now</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+
+        <div id="brand-detail">
+                <h3>LMat</h3>
+                <p class="desc">Your one-stop solution for all laundry needs</p>
+        </div>
+
+        <div id="newsletter"> 
+
+        </div>
+
+        <div id="about">
+
+        </div>
+    </section>
+ 
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
