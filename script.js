@@ -1,12 +1,11 @@
 let btn = document.querySelectorAll("#addItem");
 let bill = document.getElementById("bill-body");
 let plc = document.getElementById("placement");
-let totalamt = document.getElementById("totalamt")
-
+let totalamt = document.getElementById("totalamt");
 let cart = [];
 let total = 0;
-
 let submit = document.getElementById("submit");
+let warning = document.getElementById("warning");
 
 let inputs = document.querySelectorAll("#personal-details input");
 inputs.forEach((input) => {
@@ -37,7 +36,7 @@ btn.forEach((element) => {
                 total = total - parseFloat(cart[idx].price);
                 cart.splice(idx, 1);
             }
-            element.textContent = "Add Item";
+            element.textContent = "Add Service";
             element.classList.remove("rm-button");
             element.classList.add("first");
 
