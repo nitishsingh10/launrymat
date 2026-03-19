@@ -85,7 +85,7 @@ submit.addEventListener("click", () => {
             
         `;
         success.style.display = "block";
-        success.innerText = `Booking confirmed for ${fullName}!`;
+        success.innerHTML = `<ion-icon name="checkmark-circle-outline"></ion-icon>Booking confirmed for ${fullName}!`;
         cart = [];
         total = 0;
         bill.innerHTML = "";
